@@ -27,8 +27,8 @@
 
 void numeros(int cantidadNumeros) {
     int cantidadNumerosMayoresA150 = 0;
-    int numeroMayor = -2147483648;
-    int numeroMenor = 2147483647;
+    int numeroMayor = INFINITY * -1;
+    int numeroMenor = INFINITY;
     int cantidadNumerosNegativos = 0;
     int sumaNumerosPositivos = 0;
     int cantidadNumerosPositivos = 0;
