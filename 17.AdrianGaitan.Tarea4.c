@@ -20,8 +20,18 @@
 //Librerías
 #include <stdio.h>
 
-//Función que imprime parejas de números enteros positivos
-int imprimirParejas(int numero1, int numero2, int limite) {
+//Función principal
+int main () {
+    //Declaración e inicialización de variables
+    int numero1 = 0, numero2 = 1, limite = 10;
+    //Estas variables son los números con los que inicia la impresión
+    //límite define el número de parejas que se van a imprimir
+
+    //Mensaje de bienvenida
+    printf("Este programa imprime en pantalla una pareja de números enteros positivos.\n\n");
+    
+    //Impresión de parejas
+
     for (int i = 1; i <= limite; i ++) {
         if (i % 2 == 0) {
             printf("%d %d\n", numero1, numero2);
@@ -32,15 +42,6 @@ int imprimirParejas(int numero1, int numero2, int limite) {
             numero1 ++;
         }
     }
-    return 0;
-}
-//Función principal
-int main () {
-    //Mensaje de bienvenida
-    printf("Este programa imprime en pantalla una pareja de números enteros positivos.\n\n");
-
-    //Impresión de parejas
-    imprimirParejas(0, 1, 10);
 
     return 0;
 }
