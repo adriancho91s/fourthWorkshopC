@@ -21,7 +21,7 @@
 #include <stdio.h>
 #include <math.h>
 
-double factorial(int enesimo) {
+double calculateFactorial(int enesimo) {
     double result = 1;
     for (int i = 1;  i <= enesimo; i++) {
         result *= i;
@@ -29,10 +29,10 @@ double factorial(int enesimo) {
     return result;
 }// Esta función calcula el factorial de un número enesimo
 
-double stirlingNumber(int enesimo, int k) {
+double calculateStirlingNumber(int enesimo, int k) {
     double result = 0;
     for (int i = 0; i <= k; i++) {
-        result += pow(- 1, k - i) * pow(i, enesimo) / (factorial(i) * factorial(k - i));
+        result += pow(- 1, k - i) * pow(i, enesimo) / (calculateFactorial(i) * calculateFactorial(k - i));
     }
 
     if (enesimo >= 0 && enesimo == k) {
@@ -45,10 +45,10 @@ double stirlingNumber(int enesimo, int k) {
     return result;
 }// Esta función calcula los números de Stirling de segunda clase
 
-double bellNumber(int enesimo) {
+double calculateBellNumber(int enesimo) {
     double result = 0;
     for (int k = 0; k <= enesimo; k++) {
-        result += stirlingNumber(enesimo, k);
+        result += calculateStirlingNumber(enesimo, k);
     }
     return result;
 }
@@ -64,8 +64,8 @@ int main() {
 
     //Impresión de terminos deseados
     for (int i = 0; i < cantidadTerminos; i++) {
-        cantidadTerminos - 1 == i ? printf("%.0lf.", bellNumber(i)) :
-        printf("%.0lf, ", bellNumber(i));
+        cantidadTerminos - 1 == i ? printf("%.0lf.", calculateBellNumber(i)) :
+        printf("%.0lf, ", calculateBellNumber(i));
     }
     return 0;   
 }
