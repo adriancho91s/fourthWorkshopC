@@ -16,7 +16,7 @@
 */
 #include <stdio.h>
 
-int perrin(int enesimo) {
+int calculatePerrin(int enesimo) {
     int primerTermino = 3,
         segundoTermino = 0,
         tercerTermino = 2,
@@ -48,8 +48,8 @@ int main () {
     //Impresión de resultados
     printf("El número %i de términos de la serie de Perrin es: ", cantidadTerminos);
     for (int i = 0; i <= cantidadTerminos - 1; i++) {
-        i == (cantidadTerminos - 1) ? printf("%i.", perrin (i)):
-        printf("%i, ", perrin (i));
+        i == (cantidadTerminos - 1) ? printf("%i.", calculatePerrin(i)):
+        printf("%i, ", calculatePerrin(i));
     }
 
     return 0;
