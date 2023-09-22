@@ -19,7 +19,7 @@
 #include <stdio.h>
 #include <math.h>
 
-double factorial(int enesimo) {
+double calcularFactorial(int enesimo) {
     double result = 1;
     for (int i = 1;  i <= enesimo; i++) {
         result *= i;
@@ -27,18 +27,20 @@ double factorial(int enesimo) {
     return result;
 }// Esta función calcula el factorial de un número enesimo
 
-double taylor(long long int x, long long int enesimo) {
+double calcularTaylor(long long int x, long long int enesimo) {
     double result = 0;
     for (int i = 0; i <= enesimo; i++) {
         result += pow(x, i) / factorial(i);
     }
     return result;
-}
+}// Esta función calcula la serie de Taylor de e^(x)
 
 int main () {
     //Declaración e inicialización de variables
     long long int x = 0, enesimo = 0;
-
+    //x es el número que se va a evaluar en la serie de Taylor
+    //enesimo es el número de términos que se van a calcular
+    
     //Mensaje de bienvenida
     printf("Bienvenido, este programa calcula la serie de Taylor de e^(x)\n");
 
