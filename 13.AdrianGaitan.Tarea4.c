@@ -25,13 +25,19 @@
 #include <stdio.h>
 #include <math.h>
 
-void numeros(int cantidadNumeros) {
+//Función principal
+int main () {
+    //Declaración e inicialización de variables
+    int cantidadNumeros = 75;//Cantidad de números que va a recibir el programa
     int cantidadNumerosMayoresA150 = 0;
     int numeroMayor = INFINITY * -1;
     int numeroMenor = INFINITY;
     int cantidadNumerosNegativos = 0;
     int sumaNumerosPositivos = 0;
     int cantidadNumerosPositivos = 0;
+
+    //Mensaje de bienvenida y solicitud de datos
+    printf("Este programa recibie por consola, 75 números diferentes de cero.\nLuego imprime en pantalla la cantidad de números mayores a 150,\nnúmero mayor y número menor encontrado en el grupo de números ingresados.\nCantidad de números negativos encontrados en el grupo de números ingresados.\nPromedio de los números positivos encontrados.\n");
 
     for (int i = 0; i < cantidadNumeros; i++) {
         int numero;
@@ -49,24 +55,14 @@ void numeros(int cantidadNumeros) {
             cantidadNumerosPositivos += (numero > 0);
         }
     }
-    float promedioNumerosPositivos = (float)sumaNumerosPositivos / cantidadNumerosPositivos;
+
+    //Impresión de terminos deseados
+    float promedioNumerosPositivos = sumaNumerosPositivos / cantidadNumerosPositivos;
     printf("\nCantidad de números mayores a 150: %d", cantidadNumerosMayoresA150);
     printf("\nNúmero mayor: %d", numeroMayor);
     printf("\nNúmero menor: %d", numeroMenor);
     printf("\nCantidad de números negativos: %d", cantidadNumerosNegativos);
     printf("\nPromedio de los números positivos: %.2f", promedioNumerosPositivos);
-}
-
-//Función principal
-int main () {
-    //Declaración e inicialización de variables
-    int cantidadNumeros = 75;//Cantidad de números que va a recibir el programa
-
-    //Mensaje de bienvenida y solicitud de datos
-    printf("Este programa recibie por consola, 75 números diferentes de cero.\nLuego imprime en pantalla la cantidad de números mayores a 150,\nnúmero mayor y número menor encontrado en el grupo de números ingresados.\nCantidad de números negativos encontrados en el grupo de números ingresados.\nPromedio de los números positivos encontrados.\n");
-
-    //Impresión de terminos deseados
-    numeros(cantidadNumeros);
 
     return 0;
 }
