@@ -21,7 +21,8 @@ int perrin(int enesimo) {
         segundoTermino = 0,
         tercerTermino = 2,
         resultado = 0;
-
+    //Primeros terminos de la serie de Perrin y el acumulador del resultado
+    
     if (enesimo == 0) return 3;
     if (enesimo == 1) return 0;
     if (enesimo == 2) return 2;
@@ -34,18 +35,10 @@ int perrin(int enesimo) {
     return resultado;
 }
 
-int imprimirPerrin(int terminos) {
-    printf("El número %i de términos de la serie de Perrin es: ", terminos);
-    for (int i = 0; i <= terminos; i++) {
-        i == terminos ? printf("%i.", perrin (i)):
-        printf("%i, ", perrin (i));
-    }
-    return 0;
-}
-
 int main () {
     //Declaración e inicialización de variables
     int cantidadTerminos = 0;
+    //Esta variable se utiliza para almacenar la entrada del usuario
 
     //Mensaje bienvenida y solicitud de datos
     printf("Este programa imprime en pantalla los primeros n terminos de la serie de Perrin.\n");
@@ -53,7 +46,11 @@ int main () {
     scanf("%i", &cantidadTerminos);
 
     //Impresión de resultados
-    imprimirPerrin(cantidadTerminos - 1);
+    printf("El número %i de términos de la serie de Perrin es: ", cantidadTerminos);
+    for (int i = 0; i <= cantidadTerminos - 1; i++) {
+        i == (cantidadTerminos - 1) ? printf("%i.", perrin (i)):
+        printf("%i, ", perrin (i));
+    }
 
     return 0;
 }
