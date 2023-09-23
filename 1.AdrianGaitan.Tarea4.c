@@ -21,7 +21,7 @@
 int main () {
 
     //Mensaje de bienvenida
-    printf("Este programa presenta la serie de Fibonacci como la serie que comienza con los dígitos 0 y 1 y va\nsumando progresivamente los dos últimos elementos de la serie, así: 0 1 1 2 3 5 8 13 21 34...\nPara este programa, se presentará la serie de Fibonacci hasta llegar sin sobrepasar el número 10,000.\n");
+    printf("Este programa presenta la serie de Fibonacci como la serie que comienza con los dígitos 0 y 1 y va\nsumando progresivamente los dos últimos elementos de la serie, así: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...\nPara este programa, se presentará la serie de Fibonacci hasta llegar sin sobrepasar el número 10,000.\n");
     
     for (int primerValor = 0, segundoValor = 1; primerValor < 10000; segundoValor += primerValor, primerValor = segundoValor - primerValor) {
         if (segundoValor > 10000) {
