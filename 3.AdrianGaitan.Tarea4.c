@@ -36,7 +36,7 @@ int main () {
 
     //Ciclo for para imprimir la serie de Lucas
     for ( int i = 1; i <= numeroTerminos; i++) {
-        i == numeroTerminos ? printf( "%i.", primerTermino ) :
+        i == numeroTerminos ? printf( "%i.", primerTermino ) : 
         printf( "%i, ", primerTermino );
         siguienteTermino= primerTermino + segundoTermino;
         primerTermino= segundoTermino;
