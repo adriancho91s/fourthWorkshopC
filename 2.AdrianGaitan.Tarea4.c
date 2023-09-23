@@ -18,7 +18,7 @@
 
 int main() {
     //Declaración e inicialización de variables
-    int primerValor = 0, segundoValor = 1, suma = 0;
+    int suma = 0;
     // primerValor: Primer termino de la serie de fibonacci
     // segundoValor: Segundo termino de la serie de fibonacci
     // suma: Acumulador de la suma de los terminos de la serie de fibonacci
@@ -26,10 +26,10 @@ int main() {
     // no se sumaría
 
     //Mensaje de bienvenida
-    printf("Este programa presenta la serie de Fibonacci hasta llegar sin sobrepasar el número 10,000.\n");
+    printf("Este programa presenta la suma de los elementos de la serie de Fibonacci entre 0 y 100.\nLos números a");
 
     //Ciclo for para imprimir la serie de fibonacci
-    for (; primerValor < 100; segundoValor = primerValor + segundoValor, primerValor = segundoValor - primerValor){
+    for (int primerValor = 0, segundoValor = 1; primerValor < 100; segundoValor = primerValor + segundoValor, primerValor = segundoValor - primerValor){
         printf("\x1b[32m%i,\x1b[0m ", primerValor);
         suma += primerValor;
     }
