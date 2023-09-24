@@ -31,17 +31,15 @@ double calculateFactorial(int enesimo) {
 
 double calculateStirlingNumber(int enesimo, int k) {
     double result = 0;
+    if (enesimo >= 0 && enesimo == k) {
+        return result = 1;
+    }
+    if ( enesimo >= 1 && k == 1) {
+        return result = 1;
+    }
     for (int i = 0; i <= k; i++) {
         result += pow(- 1, k - i) * pow(i, enesimo) / (calculateFactorial(i) * calculateFactorial(k - i));
     }
-
-    if (enesimo >= 0 && enesimo == k) {
-        result = 1;
-    }
-    if ( enesimo >= 1 && k == 1) {
-        result = 1;
-    }
-    
     return result;
 }// Esta función calcula los números de Stirling de segunda clase
 
