@@ -25,7 +25,7 @@ int main() {
     //Variable invertido almacena el número invertido
     
     //Mensaje de bienvenida y solicitud de datos
-    printf("Este programa lee por consola un valor de entrada de tipo número,\ny luego imprime este número al revés.\n");
+    printf("Este programa lee por consola un número,\ny luego imprime este número al revés.\n");
     printf("Ingrese el número que desea imprimir al revés: ");
     scanf("%lld", &numero);
 
