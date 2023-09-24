@@ -54,7 +54,7 @@ double calculateBellNumber(int enesimo) {
 
 int main() {
     //Declaración e inicialización de variables
-    int cantidadTerminos = 0;//Cantidad de terminos deseados
+    int cantidadTerminos = 0;//Cantidad de terminos deseados            
 
     //Mensaje de bienvenida y solicitud de datos
     printf("Este programa va imprimir los términos que le solicites de la serie de Bell: \nEsta serie cuenta el número de particiones no vacías de un conjunto de n elementos. \nComienza con los números 1, 1 y los siguientes términos se calculan como la suma de \nlos términos anteriores multiplicados por los números naturales consecutivos.\nIngrese a continuación el número de términos deseados: ");
