@@ -31,7 +31,7 @@ double calcularFactorial(double numero) {
 int main() {
     int cantidadTerminos = 0;
 
-    printf("Este programa imprime en pantalla hasta el termino enesimo que solicites.\n De la serie Catalan es una secuencia de números que aparece en diversos problemas de conteo en matemáticas\n Comienza con los números 1, 1 y los siguientes términos se calculan como la suma de los productos de los términos anteriores.\n");
+    printf("Este programa imprime en pantalla hasta el termino enesimo que solicites de la serie Catalan, \nes una secuencia de números que aparece en diversos problemas de conteo en matemáticas\n Comienza con los números 1, 1 y los siguientes términos se calculan como la suma de los productos de los términos anteriores.\n");
     printf("Ingrese la cantidad de términos de la serie de Catalan que desea ver: ");
     scanf("%i", &cantidadTerminos);
 
