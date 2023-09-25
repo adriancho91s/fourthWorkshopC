@@ -40,7 +40,7 @@ int main () {
     printf("Este programa recibie por consola, 75 números diferentes de cero.\nLuego, imprime en pantalla la cantidad de números mayores a 150,\nnúmero mayor y número menor encontrado en el grupo de números ingresados.\nCantidad de números negativos encontrados en el grupo de números ingresados.\nPromedio de los números positivos encontrados.\n");
 
     for (int i = 0; i < cantidadNumeros; i++) {
-        int numero;
+        int numero = 0;
         printf("Ingrese el número %d: ", i + 1);
         scanf("%d", &numero);
         if (numero == 0) {
