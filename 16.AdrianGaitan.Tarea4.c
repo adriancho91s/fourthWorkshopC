@@ -36,6 +36,12 @@ int main () {
     printf("Este programa recibe como valor de entrada un número entero positivo n,\ny luego, en consola imprime la sumatoria de los factoriales de 0 a n.\nN = 0! + 1! + 2! + ... + n! = ?\nIngrese el número que desea calcular su sumatoria de factoriales: ");
     scanf("%d", &numero);
 
+    //Validación de número ingresado
+    if (numero < 0) {
+        printf("El número debe ser positivo.\n");
+        return 0;
+    }
+
     //Impresión de sumatoria de factoriales
     for (int i = 0; i <= numero; i++) {
         sumatoria += calculateFactorial(i);
