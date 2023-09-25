@@ -29,10 +29,7 @@ void printChar(char caracter, int cantidad) {
 
 //Función principal
 int main() {
-    int distancia1 = 0;
-    int distancia2 = 79;
-
-    for (; distancia1 < 40; distancia1++, distancia2 -= 2) {
+    for (int distancia1 = 0, distancia2 = 79; distancia1 < 40; distancia1++, distancia2 -= 2) {
         printChar(' ', distancia1);
         printChar('A', 1);
         printChar(' ', distancia2);
