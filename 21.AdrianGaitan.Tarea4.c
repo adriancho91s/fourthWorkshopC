@@ -21,29 +21,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int printChar(char caracter, int cantidad) {
+void printChar(char caracter, int cantidad) {
     for (int i = 0; i < cantidad; i++) {
         printf("%c", caracter);
     }
-    return 0;
-}
-
-int printTriangleAscii(int espacios, int letras, int ascii) {
-    for (int i = 0; i < espacios; i++) {
-        printChar(' ', i);
-        printChar(ascii, letras);
-        printChar('\n', 1);
-        system("sleep 0.18");
-        letras -= 2;
-        ascii -= 2;
-    }
-    return 0;
 }
 
 //Función principal
 int main () {
     //Impresión de animación
-    printTriangleAscii(7, 13, 80);
+     for (int espacios = 0, letras = 13, ascii = 80; espacios < 8;espacios ++, letras -= 2, ascii -= 2) {
+        printChar(' ', espacios);
+        printChar(ascii, letras);
+        printChar('\n', 1);
+        system("sleep 0.18");
+    }
 
     return 0;
 }
