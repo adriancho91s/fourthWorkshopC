@@ -1,6 +1,6 @@
 /*
-- Fecha: 1 de septiembre 2023
-- Hora: 1:30 pm
+- Fecha: 15 de septiembre 2023
+- Hora: 6:30 pm
 - Versión del código: 1.4
 - Presentado por: Adrián Fernando Gaitán Londoño Ing(c)
 - Presentado a: Doctor, Ricardo Moreno Laverde
