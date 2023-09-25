@@ -20,38 +20,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int printChar(char caracter, int cantidad) {
+void printChar(char caracter, int cantidad) {
     for (int i = 0; i < cantidad; i++) {
         printf("%c", caracter);
     }
-    return 0;
 }// Esta función imprime un caracter la cantidad de veces que se le indique
 
-int printFigureDown(int spaces, int letters){
-    for ( ; spaces >= 6 && letters > 0; spaces++) {
-        printChar(' ', spaces);
-        printChar('Z', letters);
-        printChar('\n', 1);
-        system("sleep 0.25");
-        letters -= 2;
-    }
-    return 0;
-}// Esta función imprime la parte de abajo de la figura
-
-int printFigureUp(int spaces, int letters) {
-    for ( ; spaces > 6; spaces--) {
-        printChar(' ', spaces);
-        printChar('Z', letters);
-        printChar('\n', 1);
-        system("sleep 0.25");
-        letters += 2;
-    }
-    return printFigureDown(6, 7);
-}// Esta función imprime la parte de arriba de la figura
 
 int main () {
     //Impresión de figura
-    printFigureUp(9, 1);//El primer número corresponde a la cantidad de espacios con que inicia
+    //El primer número corresponde a la cantidad de espacios con que inicia
     //la figura, y el segundo número corresponde a la cantidad de letras con que inicia la figura
+    for (int spaces = 9, letters = 1; spaces > 6; spaces--, letters += 2) {
+        printChar(' ', spaces);
+        printChar('Z', letters);
+        printChar('\n', 1);
+        system("sleep 0.25");
+    }
+    for (int spaces = 6, letters = 7; spaces < 10; spaces++, letters -= 2) {
+        printChar(' ', spaces);
+        printChar('Z', letters);
+        printChar('\n', 1);
+        system("sleep 0.25");
+    }
     return 0;
 }
